@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "pvult",
+    "slug": "pvult",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/vault.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/vault.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/vault.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.pvult.io"
+    },
+    "web": {
+      "favicon": "./assets/vault.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "080297f2-52a1-4090-b0f6-7a74160ffd90"
+      }
+    }
+  }
+}
