@@ -14,7 +14,7 @@ export default function App({navigation}) {
     navigation.navigate('Register')
   }
   let login=async()=>{
-let uri='http://192.168.31.72:8080/api/user/login'
+let uri='https://pm-backend-gamma.vercel.app/api/user/login'
 if (username==''||password=='') {
   alert('enter your credicial')
 }else{

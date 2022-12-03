@@ -23,7 +23,7 @@ useEffect(()=>{
 //verify user
 useEffect(()=>{
   (async()=>{
-let uri='http://192.168.31.72:8080/api/user/token'
+let uri='https://pm-backend-gamma.vercel.app/api/user/token'
     if (token) {
     let {data}=await axios.post(uri,{token})
     setUser(data)
@@ -33,7 +33,7 @@ let uri='http://192.168.31.72:8080/api/user/token'
 //get all accouns
 useEffect(()=>{
   (async()=>{
-let uri='http://192.168.31.72:8080/api/account/get'
+let uri='https://pm-backend-gamma.vercel.app/api/account/get'
     if (token) {
   let {data}=await axios.post(uri,{token})
   console.log(data)

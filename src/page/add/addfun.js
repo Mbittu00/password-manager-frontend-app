@@ -1,4 +1,4 @@
-let uri = "http://192.168.31.72:8080/api/account/add";
+let uri = "https://pm-backend-gamma.vercel.app/api/account/add";
 import axios from "axios";
 let addFun = async (
   name,
