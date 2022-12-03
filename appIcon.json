@@ -1,86 +1,286 @@
-[{
-  "app":"instagram",
-  "icon":"https://cdn-icons-png.flaticon.com/512/4138/4138124.png"
-},{
- "app":"facebook",
- "icon":"https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
-},{
-  "app":"snapchat",
-  "icon":"https://cdn-icons-png.flaticon.com/512/3669/3669965.png"
-},{
-  "app":"twitter",
-  "icon":"https://cdn-icons-png.flaticon.com/512/3670/3670151.png"
-},{
-  "app":"github",
-  "icon":"https://cdn-icons-png.flaticon.com/512/733/733609.png"
-},{
-  "app":"google",
-  "icon":"https://cdn-icons-png.flaticon.com/512/2504/2504739.png"
-},{
-  "app":"website",
-  "icon":"https://cdn-icons-png.flaticon.com/512/1927/1927656.png"
-},{
-  "app":"app",
-  "icon":"https://cdn-icons-png.flaticon.com/512/3677/3677185.png"
-},{
-  "app":"wifi",
-  "icon":"https://cdn-icons-png.flaticon.com/512/3178/3178126.png"
-},{
-  "app":"samsung",
-  "icon":"https://cdn-icons-png.flaticon.com/512/5969/5969254.png"
-},{
-  "app":"mi",
-  "icon":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThRs_jb5vrNM16YN6VzQ_koi_xYSPZUCp0UA&usqp=CAU"
-},{
-  "app":"replit",
-  "icon":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq_7yd7Ra0KMM0zvcOByz1221YOJ0Q9QpNGQ&usqp=CAU"
-},{
-  "app":"rapid",
-  "icon":"https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/r1otclpsq54uempa8x4v"
-},{
-  "app":"vercel",
-  "icon":"https://i.pinimg.com/favicons/324446ab0314d72ab5528d18758629314034b36fba00b811c06aacbc.ico?c30c7d42707a47a3f4591831641e50dc"
-},{
-  "app":"flipkart",
-  "icon":"https://cdn-icons-png.flaticon.com/512/49/49443.png"
-},{
-  "app":"irctc",
-  "icon":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVeNL8LJSFqdzycYxRB64iw0o6l6BJPuQMQ&usqp=CAU"
-},{
-  "app":"amazon",
-  "icon":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgszgMWEzxVqip-ZvQcHAbMBAQgfYxh_TyNg&usqp=CAU"
-},{
-  "app":"misho",
-  "icon":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Meesho_Logo_Full.png/480px-Meesho_Logo_Full.png"
-},{
-  "app":"groww",
-  "icon":"https://groww.in/logo-groww270.png"
-},{
-  "app":"zee5",
-  "icon":"https://logos-world.net/wp-content/uploads/2021/11/ZEE5-Emblem.png"
-},{
-  "app":"hotstar",
-  "icon":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQ7cqawW9V6XmwN1nO7vTzQx-TOSF0avLXg&usqp=CAU"
-},{
-  "app":"ganna",
-  "icon":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMX5FamRLMytpDpP736awU4_-fXT6bw195GA&usqp=CAU"
-},{
-  "app":"spotify",
-  "icon":"https://cdn-icons-png.flaticon.com/512/3669/3669986.png"
-},{
-  "app":"netflix",
-  "icon":"https://cdn-icons-png.flaticon.com/512/5968/5968617.png"
-},{
-  "app":"zoom",
-  "icon":"https://cdn-icons-png.flaticon.com/512/5969/5969328.png"
-},{
-  "app":"discord",
-  "icon":"https://cdn-icons-png.flaticon.com/512/3670/3670157.png"
-},{
-  "app":"tinder",
-  "icon":"https://cdn-icons-png.flaticon.com/512/4401/4401438.png"
-},{
-  "app":"happan",
-  "icon":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67rshPeo2WGT_Wnw9RaaEP31WDN3yyM1w-A&usqp=CAU"
-}
-  ]
+[
+  {
+    "app": "instagram",
+    "icon": "https://cdn-icons-png.flaticon.com/512/4138/4138124.png",
+    "username": true,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.instagram.com",
+    "field":{
+      "username":true,
+      "password":true
+    }
+  },
+  {
+    "app": "facebook",
+    "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968764.png",
+    "username": false,
+    "password": true,
+    "name": true,
+    "email": true,
+    "phone": true,
+    "website": "www.facebook.com"
+  },
+  {
+    "app": "snapchat",
+    "icon": "https://cdn-icons-png.flaticon.com/512/3669/3669965.png",
+    "username": true,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.snapchat.com"
+  },
+  {
+    "app": "twitter",
+    "icon": "https://cdn-icons-png.flaticon.com/512/3670/3670151.png",
+    "username": true,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.twitter.com"
+  },
+  {
+    "app": "github",
+    "icon": "https://cdn-icons-png.flaticon.com/512/733/733609.png",
+    "username": true,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.github.com"
+  },
+  {
+    "app": "google",
+    "icon": "https://cdn-icons-png.flaticon.com/512/2504/2504739.png",
+    "username": false,
+    "password": true,
+    "name": true,
+    "email": true,
+    "phone": true,
+    "website": "www.google.com"
+  },
+  {
+    "app": "website",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1927/1927656.png",
+    "username": true,
+    "password": true,
+    "name": true,
+    "email": true,
+    "phone": true,
+    "website": ""
+  },
+  {
+    "app": "app",
+    "icon": "https://cdn-icons-png.flaticon.com/512/3677/3677185.png",
+    "username": true,
+    "password": true,
+    "name": true,
+    "email": true,
+    "phone": true,
+    "website": ""
+  },
+  {
+    "app": "wifi",
+    "icon": "https://cdn-icons-png.flaticon.com/512/3178/3178126.png",
+    "username": true,
+    "password": true,
+    "name": false,
+    "email": false,
+    "phone": false,
+    "website": "wifi"
+  },
+  {
+    "app": "samsung",
+    "icon": "https://cdn-icons-png.flaticon.com/512/5969/5969254.png",
+    "username": false,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.samsung.com"
+  },
+  {
+    "app": "mi",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThRs_jb5vrNM16YN6VzQ_koi_xYSPZUCp0UA&usqp=CAU",
+    "username": false,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.mi.com"
+  },
+  {
+    "app": "replit",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq_7yd7Ra0KMM0zvcOByz1221YOJ0Q9QpNGQ&usqp=CAU",
+    "username": true,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.replit.com"
+  },
+  {
+    "app": "rapidapi",
+    "icon": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/r1otclpsq54uempa8x4v",
+    "username": false,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.rapidapi.com"
+  },
+  {
+    "app": "vercel",
+    "icon": "https://i.pinimg.com/favicons/324446ab0314d72ab5528d18758629314034b36fba00b811c06aacbc.ico?c30c7d42707a47a3f4591831641e50dc",
+    "username": true,
+    "password": false,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.vercel.com"
+  },
+  {
+    "app": "flipkart",
+    "icon": "https://cdn-icons-png.flaticon.com/512/49/49443.png",
+    "username": false,
+    "password": false,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.flipkart.com"
+  },
+  {
+    "app": "irctc",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVeNL8LJSFqdzycYxRB64iw0o6l6BJPuQMQ&usqp=CAU",
+    "username": true,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.irctc.com"
+  },
+  {
+    "app": "amazon",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgszgMWEzxVqip-ZvQcHAbMBAQgfYxh_TyNg&usqp=CAU",
+    "username": false,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.amazon.com"
+  },
+  {
+    "app": "misho",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Meesho_Logo_Full.png/480px-Meesho_Logo_Full.png",
+    "username": false,
+    "password": false,
+    "name": false,
+    "email": false,
+    "phone": true,
+    "website": "www.misho.com"
+  },
+  {
+    "app": "groww",
+    "icon": "https://groww.in/logo-groww270.png",
+    "username": false,
+    "password": false,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.groww.com"
+  },
+  {
+    "app": "zee5",
+    "icon": "https://logos-world.net/wp-content/uploads/2021/11/ZEE5-Emblem.png",
+    "username": false,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.zee5.com"
+  },
+  {
+    "app": "hotstar",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQ7cqawW9V6XmwN1nO7vTzQx-TOSF0avLXg&usqp=CAU",
+    "username": false,
+    "password": false,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.hotstar.com"
+  },
+  {
+    "app": "ganna",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMX5FamRLMytpDpP736awU4_-fXT6bw195GA&usqp=CAU",
+    "username": false,
+    "password": false,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.ganna.com"
+  },
+  {
+    "app": "spotify",
+    "icon": "https://cdn-icons-png.flaticon.com/512/3669/3669986.png",
+    "username": true,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.spotify.com"
+  },
+  {
+    "app": "netflix",
+    "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968617.png",
+    "username": false,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.netflix.com"
+  },
+  {
+    "app": "zoom",
+    "icon": "https://cdn-icons-png.flaticon.com/512/5969/5969328.png",
+    "username": false,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.zoom.com"
+  },
+  {
+    "app": "discord",
+    "icon": "https://cdn-icons-png.flaticon.com/512/3670/3670157.png",
+    "username": false,
+    "password": true,
+    "name": false,
+    "email": true,
+    "phone": true,
+    "website": "www.discord.com"
+  },
+  {
+    "app": "tinder",
+    "icon": "https://cdn-icons-png.flaticon.com/512/4401/4401438.png",
+    "username": false,
+    "password": true,
+    "name": true,
+    "email": false,
+    "phone": true,
+    "website": "www.tinder.com"
+  },
+  {
+    "app": "happan",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67rshPeo2WGT_Wnw9RaaEP31WDN3yyM1w-A&usqp=CAU",
+    "username": false,
+    "password": false,
+    "name": false,
+    "email": true,
+    "phone": false,
+    "website": "www.happan.com"
+  }
+]

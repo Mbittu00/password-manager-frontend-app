@@ -14,8 +14,10 @@ import context from "../../../context/context";
 import icon from "../../../appIcon.json";
 import * as Clipboard from "expo-clipboard";
 import axios from'axios'
+import Loading from'../../../component/load'
 export default function Preview({ navigation }) {
   let { priview,setAccounts,setShowAccount } = useContext(context);
+  let [load,setLoad]=useState(false)
   //console.log(priview);
   let back = () => {
     navigation.goBack();
@@ -25,6 +27,7 @@ export default function Preview({ navigation }) {
     ToastAndroid.show(text, ToastAndroid.SHORT);
   };
   const del=async()=>{
+    setLoad(true)
 let uri='https://pm-backend-hv8x3v7l9-mbittu00.vercel.app/api/account/delete'
 try {
   let {data}=await axios.post(uri,{_id:priview._id})
@@ -35,9 +38,12 @@ try {
 } catch (e) {
   alert('somethin is worng')
   console.log(e)
+  setLoad(false)
 }
   }
   return (
+    <>
+    {!load?
     <View style={styles.container}>
       <TouchableOpacity style={styles.one} onPress={back}>
         <Ionicons name="arrow-back" size={24} color="black" />
@@ -158,7 +164,10 @@ try {
           <Text style={styles.delText}>Delete</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </View> :
+    <Loading/>
+    }
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ import context from'../../../context/context'
 import Loading from'../../../component/load'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 export default function App({navigation}) {
-  let {setToken,setUser,setMy}=useContext(context)
+  let {setToken,setUser}=useContext(context)
   let [username,setUsername]=useState('')
   let [password,setPasword]=useState('')
   let [load,setLoad]=useState(false)
@@ -14,7 +14,7 @@ export default function App({navigation}) {
     navigation.navigate('Register')
   }
   let login=async()=>{
-let uri='https://pm-backend-hv8x3v7l9-mbittu00.vercel.app/api/user/login'
+let uri='http://192.168.31.72:8080/api/user/login'
 if (username==''||password=='') {
   alert('enter your credicial')
 }else{
@@ -22,10 +22,8 @@ if (username==''||password=='') {
   try {
   let {data}= await axios.post(uri,{username,password})
   setToken(data.token)
-  setMy(password)
   setUser(data)
   await AsyncStorage.setItem('token',data.token)
-  await AsyncStorage.setItem('password',password)
   } catch (e) {
     console.log(e)
     setLoad(false)

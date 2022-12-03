@@ -15,9 +15,8 @@ import context from'../../../context/context'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Loading from'../../../component/load'
 export default function App({ navigation }) {
-  let {setToken,setUser,setMy}=useContext(context)
+  let {setToken,setUser}=useContext(context)
   let [username, setUsername] = useState("");
-  let [name, setName] = useState("");
   let [password, setPasword] = useState("");
   let [load,setLoad]=useState(false)
   let reg = () => {
@@ -31,12 +30,10 @@ if (username==''||password=='') {
 }else{
   setLoad(true)
   try {
-  let {data}= await axios.post(uri,{username,password,name})
+  let {data}= await axios.post(uri,{username,password})
   setToken(data.token)
-  setMy(password)
   setUser(data)
   await AsyncStorage.setItem('token',data.token)
-    await AsyncStorage.setItem('password',password)
   } catch (e) {
     console.log(e)
     setLoad(false)
@@ -51,13 +48,6 @@ if (username==''||password=='') {
       <>
       <Text style={styles.page}>Register</Text>
       <View style={styles.main}>
-              <View style={styles.inputHolder}>
-          <AntDesign name="user" size={24} color="black" />
-          <TextInput style={styles.input} 
-          placeholder="Name"
-          onChangeText={setName}/>
-        </View>
-      
         <View style={styles.inputHolder}>
           <AntDesign name="user" size={24} color="black" />
           <TextInput style={styles.input} 
