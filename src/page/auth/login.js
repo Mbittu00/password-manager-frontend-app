@@ -9,6 +9,7 @@ export default function App({navigation}) {
   let {setToken,setUser}=useContext(context)
   let [username,setUsername]=useState('')
   let [password,setPasword]=useState('')
+  let [error,setError]=useState('')
   let [load,setLoad]=useState(false)
   let reg=()=>{
     navigation.navigate('Register')
@@ -16,7 +17,7 @@ export default function App({navigation}) {
   let login=async()=>{
 let uri='https://pm-backend-gamma.vercel.app/api/user/login'
 if (username==''||password=='') {
-  alert('enter your credicial')
+  setError('enter your credential')
 }else{
   setLoad(true)
   try {
@@ -27,8 +28,12 @@ if (username==''||password=='') {
   } catch (e) {
     console.log(e)
     setLoad(false)
+    setError('wrong credential')
   }
 }
+  }
+  let forgot=()=>{
+    navigation.navigate('Forgot')
   }
   return (
     <View style={styles.container}>
@@ -49,7 +54,7 @@ secureTextEntry={true}
 onChangeText={setPasword}/>
 </View>
 </View>
-
+<Text style={styles.error}>{error}</Text>
 <View style={styles.btn}>
 <TouchableOpacity style={styles.loginBtn} onPress={login}>
 <Text>Login</Text>
@@ -57,6 +62,10 @@ onChangeText={setPasword}/>
 
 <TouchableOpacity style={styles.registerBtn} onPress={reg}>
 <Text>register</Text>
+</TouchableOpacity>
+
+<TouchableOpacity style={styles.forgot} onPress={forgot}>
+<Text style={styles.ftext}>forgot Password</Text>
 </TouchableOpacity>
 </View>
 </>:<Loading/>
@@ -102,7 +111,15 @@ const styles = StyleSheet.create({
   },btn:{
     alignItems:'center'
   },registerBtn:{
-    marginTop:10
+    marginTop:5
+  },error:{
+    marginTop:5,
+    color:'red',
+    textTransform:'capitalize'
+  },forgot:{
+    marginTop:5,
+  },ftext:{
+    textDecorationLine:'underline'
   }
 });
     

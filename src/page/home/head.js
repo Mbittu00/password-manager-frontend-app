@@ -10,8 +10,9 @@ import {
 import { EvilIcons } from "@expo/vector-icons";
 import {useState,useEffect,useContext}from'react'
 import context from'../../../context/context'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 export default function Head() {
-  let {user,setAccounts,showAccount}=useContext(context)
+  let {user,setAccounts,showAccount,setToken}=useContext(context)
   let [modal,setModal]=useState(false)
   console.log(user)
   let filter=(e)=>{
@@ -24,11 +25,15 @@ export default function Head() {
     p.app == e)))*/
     }
   }
+  let clear=async()=>{
+    await AsyncStorage.setItem('token','')
+    setToken('')
+  }
   return (
     <View style={styles.container}>
       <View style={styles.profile}>
         <Text style={styles.name}>Hello {user.username}👋</Text>
-        <TouchableOpacity onPress={()=>setModal(true)}>
+        <TouchableOpacity onLongPress={clear}>
         <Image
           source={{
             uri: user.profileImg,

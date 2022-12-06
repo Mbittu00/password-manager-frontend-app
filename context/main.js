@@ -9,6 +9,9 @@ export default function Main({ children }) {
   let [showAccount,setShowAccount]=useState([])
   let [priview,setPreview]=useState({})
   let [load,setLoad]=useState(true)
+  let [userHave,setUserHave]=useState(false)
+  let [accountHave,setAccountHave]=useState(false)
+  
   //chake user login or not
   
 useEffect(()=>{
@@ -24,9 +27,15 @@ useEffect(()=>{
 useEffect(()=>{
   (async()=>{
 let uri='https://pm-backend-gamma.vercel.app/api/user/token'
-    if (token) {
-    let {data}=await axios.post(uri,{token})
+    if (token!='') {
+try {
+      let {data}=await axios.post(uri,{token})
     setUser(data)
+    setUserHave(true)
+    console.log({verify:true,data})
+} catch (e) {
+  alert(e)
+}
     }else{}
   })()
 },[token])
@@ -35,21 +44,28 @@ useEffect(()=>{
   (async()=>{
 let uri='https://pm-backend-gamma.vercel.app/api/account/get'
     if (token) {
-  let {data}=await axios.post(uri,{token})
-  console.log(data)
+try {
+    let {data}=await axios.post(uri,{token})
+  console.log(data.length)
   setAccounts(data)
   setShowAccount(data)
-  //setLoad(false)
-    }else{
-    }
+  setAccountHave(true)
+  console.log({account:true,data})
+//  alert('account')
+} catch (e) {
+  alert(e)
+}
+  }else{}
   })()
 },[token])
-//loading
+
 useEffect(()=>{
-  if (accouns[0] && user.username) {
+  if (userHave && accountHave) {
     setLoad(false)
+  }else{
+   //   alert('called')
   }
-},[accouns,user])
+},[userHave,accountHave])
   return( 
     <Context.Provider value={{
       token,setToken,user,setUser,accouns,setAccounts,
